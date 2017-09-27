@@ -1,0 +1,36 @@
+<doctype html>
+<html ng-app="myModule">
+    <head>
+      <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.js"></script>
+      <script src="handlingevents.js"></script>
+      <script src="styles1.css"></script>
+    </head>
+    <body ng-app="myModule" >
+      <div ng-controller="myController">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Likes</th>
+              <th>Dislikes</th>
+              <th>Likes/Dislikes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="technologies in technologies">
+              <td>{{ technology.name }}</td>
+              <td>{{ technology.likes }}</td>
+              <td>{{ technology.dislikes }}</td>
+              <td>
+                <input type="button" value="Likes" ng-click="incrementLikes(technology)">
+                <input type="button" value="Dislikes" ng-click="incrementDislikes(technology)">
+              </td>
+
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </body>
+    </html>
